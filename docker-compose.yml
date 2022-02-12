@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  tmask-nifi:
+    image: tmask-nifi 
+    build:
+      context: build
+    restart: unless-stopped
+    ports:
+      - "8043:8443"
+      - "8022:22"
+    container_name: tmask-nifi 
+    environment:
+      NIFI_WEB_PROXY_HOST: 'IP hosta:8043'
+    volumes:
+      - "./TMask:/opt/nifi/TMask"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    networks:
+      - "nifi"
+
+  nifi-registry:
+    image: apache/nifi-registry
+    container_name: tmask-registry
+    ports:
+      - "18080:18080"
+    networks:
+      - "nifi"
+
+networks:
+  nifi:
