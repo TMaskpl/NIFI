@@ -1,0 +1,1 @@
+jdbc:postgresql://<IP serwera>:5432/postgres?stringtype=unspecified
