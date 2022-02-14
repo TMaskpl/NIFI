@@ -1,1 +1,15 @@
 jdbc:sqlserver://<IP servera>:1433;database=pracownik;autentication=NotSpecified;encrypt=false;trustServerCertificate=false
+
+
+# Type column
+
+
+SELECT 
+TABLE_CATALOG,
+TABLE_SCHEMA,
+TABLE_NAME, 
+COLUMN_NAME, 
+DATA_TYPE 
+FROM INFORMATION_SCHEMA.COLUMNS
+where TABLE_NAME = 'pracownik' 
+
