@@ -13,3 +13,4 @@ DATA_TYPE
 FROM INFORMATION_SCHEMA.COLUMNS
 where TABLE_NAME = 'pracownik' 
 
+[link](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15)
