@@ -1,0 +1,1 @@
+jdbc:sqlserver://<IP servera>:1433;database=pracownik;autentication=NotSpecified;encrypt=false;trustServerCertificate=false
