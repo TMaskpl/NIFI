@@ -1,0 +1,8 @@
+jdbc:mysql://10.20.222.213:3306/pracownik?serverTimezone=UTC
+
+
+SELECT DATA_TYPE from INFORMATION_SCHEMA.COLUMNS where
+table_schema = ’yourDatabaseName’ and table_name = ’yourTableName’.
+
+
+[link](https://www.w3schools.com/mysql/mysql_datatypes.asp)
